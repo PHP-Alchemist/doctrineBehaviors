@@ -1,0 +1,17 @@
+{
+  "name": "php-alchemist/doctrine-behaviors",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Micah Breedlove",
+      "email": "druid628@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PHPAlchemist\\DoctrineBehaviors\\": "src/"
+    }
+  }
+}
