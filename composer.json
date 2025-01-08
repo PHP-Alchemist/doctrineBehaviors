@@ -14,5 +14,8 @@
     "psr-4": {
       "PHPAlchemist\\DoctrineBehaviors\\": "src/"
     }
+  },
+  "require": {
+    "php": "8.*"
   }
 }
