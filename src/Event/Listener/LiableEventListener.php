@@ -71,7 +71,7 @@ final class LiableEventListener extends DoctrineBehaviorsListener
 
         if (
             !DoctrineExtensionUtility::isLiable($entity) ||
-            DoctrineExtensionUtility::isSoftDeleteable($entity)
+            !DoctrineExtensionUtility::isSoftDeleteable($entity)
         ) {
             return;
         }
@@ -87,7 +87,7 @@ final class LiableEventListener extends DoctrineBehaviorsListener
             $entity,
             LiableInterface::DELETED_BY,
             $oldDeletedByValue,
-            $user
+            $entity->getDeletedBy()
         );
     }
 }

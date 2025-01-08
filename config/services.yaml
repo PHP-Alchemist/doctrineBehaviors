@@ -41,7 +41,7 @@ services:
        - {
         name: doctrine.event_listener
         event:
-          - 'preRemove'
+          - 'onFlush'
         priority: 500
         connection: default
         arguments:
