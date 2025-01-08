@@ -2,10 +2,7 @@ services:
   PHPAlchemist\DoctrineBehaviors\Event\Listener\LiableEventListener:
     tags:
       - name: 'doctrine.event_listener'
-        event:
-          - 'prePersist'
-          - 'preUpdate'
-          - 'preRemove'
+        event: [ 'prePersist', 'preUpdate', 'preRemove' ]
         priority: 500
         connection: 'default'
 
@@ -13,16 +10,13 @@ services:
   PHPAlchemist\DoctrineBehaviors\Event\Listener\TimestampableEventListener:
     tags:
       - name: 'doctrine.event_listener'
-        event:
-          - 'prePersist'
-          - 'preUpdate'
+        event: [ 'prePersist', 'preUpdate' ]
         priority: 500
         connection: 'default'
 
   PHPAlchemist\DoctrineBehaviors\Event\Listener\SoftDeleteableListener:
     tags:
       - name: 'doctrine.event_listener'
-        event:
-          - 'preRemove'
+        event: [ 'preRemove' ]
         priority: 500
         connection: 'default'
