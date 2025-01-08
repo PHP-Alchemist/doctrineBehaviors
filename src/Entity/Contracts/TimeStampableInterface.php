@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Contracts;
+namespace PHPAlchemist\DoctrineBehaviors\Entity\Contracts;
 
 interface TimeStampableInterface
 {
