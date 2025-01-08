@@ -2,7 +2,7 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Trait\Repository;
 
-trait SoftDeletableTrait
+trait SoftDeletableRepoTrait
 {
     public function findActive()
     {
