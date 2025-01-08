@@ -2,10 +2,11 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
-use App\Utility\DoctrineExtensionUtility;
+use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\{PreRemoveEventArgs};
 use Doctrine\ORM\Events;
+use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\SoftDeleteableInterface;
 
 // # [- AsDoctrineListener(event: Events::preRemove, priority: 500, connection: 'default')]
 #[AsDoctrineListener(event: Events::preRemove, priority: '500', connection: 'default')]
@@ -34,7 +35,7 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
 
         $unitOfWork->propertyChanged(
             $entity,
-            'deletedBy',
+            SoftDeleteableInterface::DELETED_AT,
             $oldDeletedAt,
             $newDeletedAt
         );
@@ -46,7 +47,5 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
                     $entity->getDeletedAt(),
                 ],
             ]);
-
     }
-
 }

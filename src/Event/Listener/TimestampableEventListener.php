@@ -2,12 +2,12 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
-use App\Utility\DoctrineExtensionUtility;
+use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\PrePersistEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Doctrine\ORM\Events;
-use PHPAlchemist\DoctrineBehaviors\Contracts\TimeStampableInterface;
+use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\TimeStampableInterface;
 
 #[AsDoctrineListener(event: Events::prePersist, priority: 500, connection: 'default')]
 #[AsDoctrineListener(event: Events::preUpdate, priority: 500, connection: 'default')]
@@ -41,8 +41,6 @@ final class TimestampableEventListener extends DoctrineBehaviorsListener
         $entity     = $args->getObject();
 
         if (!DoctrineExtensionUtility::isTimeStampable($entity)) {
-            die('You Should not see me');
-
             return;
         }
 

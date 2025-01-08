@@ -2,10 +2,10 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
-use App\Utility\DoctrineExtensionUtility;
+use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsEntityListener;
-use PHPAlchemist\DoctrineBehaviors\Contracts\LiableInterface;
+use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\LiableInterface;
 use Doctrine\ORM\Event\{PrePersistEventArgs, PreRemoveEventArgs, PreUpdateEventArgs};
 use Doctrine\ORM\Events;
 
@@ -90,5 +90,4 @@ final class LiableEventListener extends DoctrineBehaviorsListener
             $user
         );
     }
-
 }

@@ -2,9 +2,9 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Utility;
 
-use PHPAlchemist\DoctrineBehaviors\Contracts\LiableInterface;
-use PHPAlchemist\DoctrineBehaviors\Contracts\SoftDeleteableInterface;
-use PHPAlchemist\DoctrineBehaviors\Contracts\TimeStampableInterface;
+use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\LiableInterface;
+use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\SoftDeleteableInterface;
+use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\TimeStampableInterface;
 
 class DoctrineExtensionUtility
 {
@@ -28,7 +28,7 @@ class DoctrineExtensionUtility
 
     public static function isTimeStampable(object $object) : bool
     {
-        if ($object instanceof TimeStampableInterface) {
+        if (!$object instanceof TimeStampableInterface) {
             return false;
         }
 
