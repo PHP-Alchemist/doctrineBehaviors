@@ -10,45 +10,45 @@ trait LiableTrait
 {
     #[ORM\ManyToOne(targetEntity: UserInterface::class)]
     #[ORM\JoinColumn(nullable: true, onDelete: 'SET NULL', name: 'created_by')]
-    protected ?User $createdBy = null;
+    protected ?UserInterface $createdBy = null;
     #[ORM\ManyToOne(targetEntity: UserInterface::class)]
     #[ORM\JoinColumn(nullable: true, onDelete: 'SET NULL', name: 'updated_by')]
-    protected ?User $updatedBy = null;
+    protected ?UserInterface $updatedBy = null;
 
     #[ORM\ManyToOne(targetEntity: UserInterface::class)]
     #[ORM\JoinColumn(nullable: true, onDelete: 'SET NULL', name: 'deleted_by')]
-    protected ?User $deletedBy = null;
+    protected ?UserInterface $deletedBy = null;
 
-    public function getCreatedBy() : ?User
+    public function getCreatedBy() : ?UserInterface
     {
         return $this->createdBy;
     }
 
-    public function setCreatedBy(?User $createdBy) : self
+    public function setCreatedBy(?UserInterface $createdBy) : self
     {
         $this->createdBy = $createdBy;
 
         return $this;
     }
 
-    public function getUpdatedBy() : ?User
+    public function getUpdatedBy() : ?UserInterface
     {
         return $this->updatedBy;
     }
 
-    public function setUpdatedBy(?User $updatedBy) : self
+    public function setUpdatedBy(?UserInterface $updatedBy) : self
     {
         $this->updatedBy = $updatedBy;
 
         return $this;
     }
 
-    public function getDeletedBy() : ?User
+    public function getDeletedBy() : ?UserInterface
     {
         return $this->deletedBy;
     }
 
-    public function setDeletedBy(?User $deletedBy) : self
+    public function setDeletedBy(?UserInterface $deletedBy) : self
     {
         $this->deletedBy = $deletedBy;
 
