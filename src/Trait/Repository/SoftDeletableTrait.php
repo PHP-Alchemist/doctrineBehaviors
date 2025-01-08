@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Traits\Repository;
+namespace PHPAlchemist\DoctrineBehaviors\Trait\Repository;
 
 trait SoftDeletableTrait
 {

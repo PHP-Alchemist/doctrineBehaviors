@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Traits;
+namespace PHPAlchemist\DoctrineBehaviors\Trait;
 
 use Doctrine\ORM\Mapping as ORM;
 
