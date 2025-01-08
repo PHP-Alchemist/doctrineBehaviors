@@ -1,6 +1,7 @@
 {
   "name": "php-alchemist/doctrine-behaviors",
   "description": "description",
+  "type": "syfony-bundle",
   "minimum-stability": "stable",
   "license": "proprietary",
   "authors": [
