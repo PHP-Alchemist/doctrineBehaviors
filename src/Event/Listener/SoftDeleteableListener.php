@@ -21,19 +21,11 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
         foreach ($unitOfWork->getScheduledEntityDeletions() as $entity) {
 
             if (!DoctrineExtensionUtility::isSoftDeleteable($entity)) {
-                if ($entity instanceof Defendant) {
-                    die('oops!');
-                }
-
                 return;
             }
 
             $user = $this->getUser();
             if (!$user) {
-                if ($entity instanceof Defendant) {
-                    die('wtf?');
-                }
-
                 return;
             }
 
