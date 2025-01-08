@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Event\Listener;
+namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
 use App\Utility\DoctrineExtensionUtility;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;

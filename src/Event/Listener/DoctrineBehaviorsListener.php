@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Event\Listener;
+namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
 use Doctrine\ORM\UnitOfWork;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
