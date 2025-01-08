@@ -3,12 +3,12 @@ services:
   PHPAlchemist\DoctrineBehaviors\Event\Listener\LiableEventListener:
     autowire: true
     autoconfigure: true
-  PHPAlchemist\DoctrineBehaviors\Event\Listener\TimestampableEventListener:
-    autowire: true
-    autoconfigure: true
-  PHPAlchemist\DoctrineBehaviors\Event\Listener\SoftDeleteableListener:
-    autowire: true
-    autoconfigure: true
+#  PHPAlchemist\DoctrineBehaviors\Event\Listener\TimestampableEventListener:
+#    autowire: true
+#    autoconfigure: true
+#  PHPAlchemist\DoctrineBehaviors\Event\Listener\SoftDeleteableListener:
+#    autowire: true
+#    autoconfigure: true
 
 #  PHPAlchemist\DoctrineBehaviors\Event\Listener\LiableEventListener:
 #    tags:
