@@ -3,7 +3,7 @@
   "description": "description",
   "type": "syfony-bundle",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "BSD-3-Clause",
   "authors": [
     {
       "name": "Micah Breedlove",
