@@ -17,5 +17,8 @@
   },
   "require": {
     "php": "8.*"
+  },
+  "require-dev": {
+    "psalm/phar": "^6.3"
   }
 }
