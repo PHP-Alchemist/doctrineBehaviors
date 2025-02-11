@@ -3,7 +3,6 @@
 namespace PHPAlchemist\DoctrineBehaviors\Trait;
 
 use Doctrine\ORM\Mapping as ORM;
-use App\Entity\User;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 trait LiableTrait

@@ -2,7 +2,6 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
-use App\Entity\Defendant;
 use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\LiableInterface;
 use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
@@ -39,29 +38,29 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
 
             $objectManager->persist($entity);
             $unitOfWork->propertyChanged(
-                $entity,
-                LiableInterface::DELETED_BY,
-                $oldDeletedBy,
-                $entity->getDeletedBy(),
+              $entity,
+              LiableInterface::DELETED_BY,
+              $oldDeletedBy,
+              $entity->getDeletedBy(),
             );
             $unitOfWork->propertyChanged(
-                $entity,
-                SoftDeleteableInterface::DELETED_AT,
-                $oldDeletedAt,
-                $newDeletedAt
+              $entity,
+              SoftDeleteableInterface::DELETED_AT,
+              $oldDeletedAt,
+              $newDeletedAt
             );
             $unitOfWork->scheduleExtraUpdate(
-                $entity,
-                [
-                    SoftDeleteableInterface::DELETED_AT => [
-                        $oldDeletedAt,
-                        $entity->getDeletedAt(),
-                    ],
-                    LiableInterface::DELETED_BY         => [
-                        $oldDeletedBy,
-                        $entity->getDeletedBy(),
-                    ],
-                ]);
+              $entity,
+              [
+                SoftDeleteableInterface::DELETED_AT => [
+                  $oldDeletedAt,
+                  $entity->getDeletedAt(),
+                ],
+                LiableInterface::DELETED_BY         => [
+                  $oldDeletedBy,
+                  $entity->getDeletedBy(),
+                ],
+              ]);
         }
     }
 }
