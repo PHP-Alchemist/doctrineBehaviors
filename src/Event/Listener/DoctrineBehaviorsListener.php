@@ -4,7 +4,6 @@ namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
 use Doctrine\ORM\UnitOfWork;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
-use http\Encoding\Stream\Debrotli;
 use PHPAlchemist\DoctrineBehaviors\Contract\DecisionServiceInterface;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -48,5 +47,4 @@ abstract class DoctrineBehaviorsListener
 
         return $objectManager->getUnitOfWork();
     }
-
 }

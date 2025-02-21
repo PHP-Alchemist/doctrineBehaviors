@@ -4,7 +4,6 @@ namespace PHPAlchemist\DoctrineBehaviors\Entity\Contracts;
 
 interface SoftDeleteableInterface
 {
-
     public const DELETED_AT = 'deletedAt';
 
     public function setDeletedAt(?\DateTime $deletedAt) : self;

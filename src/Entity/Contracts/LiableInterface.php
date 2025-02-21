@@ -21,5 +21,4 @@ interface LiableInterface
     public function getDeletedBy() : ?UserInterface;
 
     public function setDeletedBy(?UserInterface $user) : self;
-
 }
