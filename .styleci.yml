@@ -1,14 +1,8 @@
-php:
-  version: 8.4
-  preset: recommended
-  tab-width: 4
-  use-tabs: false
-  enabled:
-    - align_equals
-    - align_double_arrow
-    - short_array_syntax
-    - blank_line_before_return
-    - no_blank_lines_after_return
-    - symfony_braces
-  disabled:
-    - return_type_declaration
+preset: recommended
+tab-width: 4
+use-tabs: false
+enabled:
+  - align_equals
+  - no_blank_lines_after_return
+disabled:
+  - return_type_declaration
