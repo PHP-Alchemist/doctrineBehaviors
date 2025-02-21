@@ -1,4 +1,8 @@
-# DoctrineBehaviorsBundle
+# DoctrineBehaviorsBundle  
+
+-------
+[![StyleCI](https://github.styleci.io/repos/913580276/shield?branch=master)](https://github.styleci.io/repos/913580276?branch=master)
+-------
 A simplified doctrine extension  to add common behaviors
 
 Yet another fun-filled doctrine-behaviors-bundle. It isn't designed to be the 
