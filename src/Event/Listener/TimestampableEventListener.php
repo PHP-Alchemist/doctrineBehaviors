@@ -2,12 +2,12 @@
 
 namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
 
-use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\PrePersistEventArgs;
 use Doctrine\ORM\Event\PreUpdateEventArgs;
 use Doctrine\ORM\Events;
 use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\TimeStampableInterface;
+use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 
 #[AsDoctrineListener(event: Events::prePersist, priority: 500, connection: 'default')]
 #[AsDoctrineListener(event: Events::preUpdate, priority: 500, connection: 'default')]
