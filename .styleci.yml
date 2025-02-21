@@ -6,3 +6,4 @@ enabled:
   - no_blank_lines_after_return
 disabled:
   - return_type_declaration
+  - unalign_equals
