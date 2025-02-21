@@ -14,8 +14,14 @@ use Doctrine\ORM\Events;
 #[AsDoctrineListener(event: Events::preRemove, priority: 500, connection: 'default')]
 final class LiableEventListener extends DoctrineBehaviorsListener
 {
+    const string NAME = 'liable';
+
     public function prePersist(PrePersistEventArgs $args) : void
     {
+        if (!$this->confirmExecutable(self::NAME)) {
+            return;
+        }
+
         $unitOfWork = $this->getUnitOfWork($args);
         $entity     = $args->getObject();
 
@@ -42,6 +48,10 @@ final class LiableEventListener extends DoctrineBehaviorsListener
 
     public function preUpdate(PreUpdateEventArgs $args) : void
     {
+        if (!$this->confirmExecutable(self::NAME)) {
+            return;
+        }
+
         $unitOfWork = $this->getUnitOfWork($args);
         $entity     = $args->getObject();
 
@@ -66,6 +76,10 @@ final class LiableEventListener extends DoctrineBehaviorsListener
 
     public function preRemove(PreRemoveEventArgs $preRemoveEventArgs) : void
     {
+        if (!$this->confirmExecutable(self::NAME)) {
+            return;
+        }
+
         $unitOfWork = $this->getUnitOfWork($preRemoveEventArgs);
         $entity     = $preRemoveEventArgs->getObject();
 

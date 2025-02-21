@@ -13,8 +13,14 @@ use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\TimeStampableInterface;
 #[AsDoctrineListener(event: Events::preUpdate, priority: 500, connection: 'default')]
 final class TimestampableEventListener extends DoctrineBehaviorsListener
 {
+    const string NAME = 'timestampable';
+
     public function prePersist(PrePersistEventArgs $args) : void
     {
+        if (!$this->confirmExecutable(self::NAME)) {
+            return;
+        }
+
         $unitOfWork = $this->getUnitOfWork($args);
         $entity     = $args->getObject();
 
@@ -37,6 +43,10 @@ final class TimestampableEventListener extends DoctrineBehaviorsListener
 
     public function preUpdate(PreUpdateEventArgs $args) : void
     {
+        if (!$this->confirmExecutable(self::NAME)) {
+            return;
+        }
+
         $unitOfWork = $this->getUnitOfWork($args);
         $entity     = $args->getObject();
 

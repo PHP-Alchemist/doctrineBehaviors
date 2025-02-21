@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e850f172f1b7d4c0f1112578b16561f",
+    "content-hash": "7c353a8bc7d51b133dd1569eb7320464",
     "packages": [],
     "packages-dev": [
         {
             "name": "psalm/phar",
-            "version": "6.3.0",
+            "version": "6.8.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/psalm/phar.git",
-                "reference": "5a7c1fb6660ee1313a109f6564df6e9223e3643a"
+                "reference": "dc092300ad8028301f9825c6f44af6e95982218f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/psalm/phar/zipball/5a7c1fb6660ee1313a109f6564df6e9223e3643a",
-                "reference": "5a7c1fb6660ee1313a109f6564df6e9223e3643a",
+                "url": "https://api.github.com/repos/psalm/phar/zipball/dc092300ad8028301f9825c6f44af6e95982218f",
+                "reference": "dc092300ad8028301f9825c6f44af6e95982218f",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^8.2"
             },
             "conflict": {
                 "vimeo/psalm": "*"
@@ -38,9 +38,9 @@
             "description": "Composer-based Psalm Phar",
             "support": {
                 "issues": "https://github.com/psalm/phar/issues",
-                "source": "https://github.com/psalm/phar/tree/6.3.0"
+                "source": "https://github.com/psalm/phar/tree/6.8.6"
             },
-            "time": "2025-02-04T21:08:50+00:00"
+            "time": "2025-02-21T10:06:54+00:00"
         }
     ],
     "aliases": [],
@@ -49,7 +49,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "8.*"
+        "php": "~8.4"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"

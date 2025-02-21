@@ -12,8 +12,15 @@ use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\SoftDeleteableInterface;
 #[AsDoctrineListener(event: Events::onFlush, priority: '500', connection: 'default')]
 final class SoftDeleteableListener extends DoctrineBehaviorsListener
 {
+    const string NAME = 'soft-deleteable';
+
+
     public function onFlush(OnFlushEventArgs $args) : void
     {
+        if (!$this->confirmExecutable(self::NAME)) {
+            return;
+        }
+
         $objectManager = $args->getObjectManager();
         $unitOfWork    = $objectManager->getUnitOfWork();
 
