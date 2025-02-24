@@ -3,7 +3,6 @@
 namespace PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener;
 
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
-use Doctrine\Bundle\DoctrineBundle\Attribute\AsEntityListener;
 use Doctrine\ORM\Event\{PrePersistEventArgs, PreRemoveEventArgs, PreUpdateEventArgs};
 use Doctrine\ORM\Events;
 use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\LiableInterface;

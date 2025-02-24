@@ -14,7 +14,6 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
 {
     const string NAME = 'soft-deleteable';
 
-
     public function onFlush(OnFlushEventArgs $args) : void
     {
         if (!$this->confirmExecutable(self::NAME)) {
@@ -25,7 +24,6 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
         $unitOfWork    = $objectManager->getUnitOfWork();
 
         foreach ($unitOfWork->getScheduledEntityDeletions() as $entity) {
-
             if (!DoctrineExtensionUtility::isSoftDeleteable($entity)) {
                 return;
             }
@@ -45,29 +43,30 @@ final class SoftDeleteableListener extends DoctrineBehaviorsListener
 
             $objectManager->persist($entity);
             $unitOfWork->propertyChanged(
-              $entity,
-              LiableInterface::DELETED_BY,
-              $oldDeletedBy,
-              $entity->getDeletedBy(),
+                $entity,
+                LiableInterface::DELETED_BY,
+                $oldDeletedBy,
+                $entity->getDeletedBy(),
             );
             $unitOfWork->propertyChanged(
-              $entity,
-              SoftDeleteableInterface::DELETED_AT,
-              $oldDeletedAt,
-              $newDeletedAt
+                $entity,
+                SoftDeleteableInterface::DELETED_AT,
+                $oldDeletedAt,
+                $newDeletedAt
             );
             $unitOfWork->scheduleExtraUpdate(
-              $entity,
-              [
-                SoftDeleteableInterface::DELETED_AT => [
-                  $oldDeletedAt,
-                  $entity->getDeletedAt(),
-                ],
-                LiableInterface::DELETED_BY         => [
-                  $oldDeletedBy,
-                  $entity->getDeletedBy(),
-                ],
-              ]);
+                $entity,
+                [
+                    SoftDeleteableInterface::DELETED_AT => [
+                        $oldDeletedAt,
+                        $entity->getDeletedAt(),
+                    ],
+                    LiableInterface::DELETED_BY         => [
+                        $oldDeletedBy,
+                        $entity->getDeletedBy(),
+                    ],
+                ]
+            );
         }
     }
 }

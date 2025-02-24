@@ -47,5 +47,4 @@ abstract class DoctrineBehaviorsListener
 
         return $objectManager->getUnitOfWork();
     }
-
 }
