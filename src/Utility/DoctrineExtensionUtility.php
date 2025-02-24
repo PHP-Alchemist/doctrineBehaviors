@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Utility;
+namespace PHPAlchemist\Bundle\DoctrineBehaviors\Utility;
 
-use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\LiableInterface;
-use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\SoftDeleteableInterface;
-use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\TimeStampableInterface;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\LiableInterface;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\SoftDeleteableInterface;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\TimeStampableInterface;
 
 class DoctrineExtensionUtility
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Service;
+namespace PHPAlchemist\Bundle\DoctrineBehaviors\Service;
 
-use PHPAlchemist\DoctrineBehaviors\Contract\DecisionServiceInterface;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Contract\DecisionServiceInterface;
 
 class DecisionService implements DecisionServiceInterface
 {

@@ -12,7 +12,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "PHPAlchemist\\DoctrineBehaviors\\": "src/"
+      "PHPAlchemist\\Bundle\\DoctrineBehaviors\\": "src/"
     }
   },
   "require": {

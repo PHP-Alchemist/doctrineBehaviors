@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Entity\Contracts;
+namespace PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -21,4 +21,5 @@ interface LiableInterface
     public function getDeletedBy() : ?UserInterface;
 
     public function setDeletedBy(?UserInterface $user) : self;
+
 }

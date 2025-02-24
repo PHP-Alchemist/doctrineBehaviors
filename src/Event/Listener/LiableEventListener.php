@@ -1,12 +1,13 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
+namespace PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener;
 
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
+use Doctrine\Bundle\DoctrineBundle\Attribute\AsEntityListener;
 use Doctrine\ORM\Event\{PrePersistEventArgs, PreRemoveEventArgs, PreUpdateEventArgs};
 use Doctrine\ORM\Events;
-use PHPAlchemist\DoctrineBehaviors\Entity\Contracts\LiableInterface;
-use PHPAlchemist\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\LiableInterface;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
 
 #[AsDoctrineListener(event: Events::prePersist, priority: 500, connection: 'default')]
 #[AsDoctrineListener(event: Events::preUpdate, priority: 500, connection: 'default')]

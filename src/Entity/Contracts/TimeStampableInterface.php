@@ -1,9 +1,10 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Entity\Contracts;
+namespace PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts;
 
 interface TimeStampableInterface
 {
+
     public const CREATED_AT = 'createdAt';
     public const UPDATED_AT = 'updatedAt';
 
@@ -14,4 +15,5 @@ interface TimeStampableInterface
     public function getUpdatedAt() : ?\DateTime;
 
     public function setUpdatedAt(\DateTime $updatedAt);
+
 }

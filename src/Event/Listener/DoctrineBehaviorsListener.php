@@ -1,10 +1,10 @@
 <?php
 
-namespace PHPAlchemist\DoctrineBehaviors\Event\Listener;
+namespace PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener;
 
 use Doctrine\ORM\UnitOfWork;
 use Doctrine\Persistence\Event\LifecycleEventArgs;
-use PHPAlchemist\DoctrineBehaviors\Contract\DecisionServiceInterface;
+use PHPAlchemist\Bundle\DoctrineBehaviors\Contract\DecisionServiceInterface;
 use Symfony\Bundle\SecurityBundle\Security;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -47,4 +47,5 @@ abstract class DoctrineBehaviorsListener
 
         return $objectManager->getUnitOfWork();
     }
+
 }

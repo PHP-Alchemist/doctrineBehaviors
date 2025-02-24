@@ -6,39 +6,39 @@
 
     <services>
         <!-- Liable -->
-        <service id="php_alchemist.doctrine_behaviors.listener.liable" class="PHPAlchemist\DoctrineBehaviors\Event\Listener\LiableEventListener">
+        <service id="php_alchemist.doctrine_behaviors.listener.liable" class="PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener\LiableEventListener">
             <argument key="$security" type="service" id="Symfony\Bundle\SecurityBundle\Security"/>
             <call method="setDecisionService">
                 <argument type="service" id="php_alchemist.doctrine_behaviors.decision_service"/>
             </call>
         </service>
-        <service id="PHPAlchemist\DoctrineBehaviors\Event\Listener\LiableEventListener" alias="php_alchemist.doctrine_behaviors.listener.liable" />
+        <service id="PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener\LiableEventListener" alias="php_alchemist.doctrine_behaviors.listener.liable" />
 
         <!-- Timestampable -->
-        <service id="php_alchemist.doctrine_behaviors.listener.timestampable" class="PHPAlchemist\DoctrineBehaviors\Event\Listener\TimestampableEventListener">
+        <service id="php_alchemist.doctrine_behaviors.listener.timestampable" class="PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener\TimestampableEventListener">
             <argument key="$security" type="service" id="Symfony\Bundle\SecurityBundle\Security"/>
             <call method="setDecisionService">
                 <argument type="service" id="php_alchemist.doctrine_behaviors.decision_service"/>
             </call>
         </service>
-        <service id="PHPAlchemist\DoctrineBehaviors\Event\Listener\TimestampableEventListener" alias="php_alchemist.doctrine_behaviors.listener.timestampable" />
+        <service id="PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener\TimestampableEventListener" alias="php_alchemist.doctrine_behaviors.listener.timestampable" />
 
         <!-- SoftDeleteable -->
-        <service id="php_alchemist.doctrine_behaviors.listener.softdeletable" class="PHPAlchemist\DoctrineBehaviors\Event\Listener\SoftDeleteableListener">
+        <service id="php_alchemist.doctrine_behaviors.listener.softdeletable" class="PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener\SoftDeleteableListener">
             <argument key="$security" type="service" id="Symfony\Bundle\SecurityBundle\Security"/>
             <call method="setDecisionService">
                 <argument type="service" id="php_alchemist.doctrine_behaviors.decision_service"/>
             </call>
         </service>
-        <service id="PHPAlchemist\DoctrineBehaviors\Event\Listener\SoftDeleteableListener" alias="php_alchemist.doctrine_behaviors.listener.softdeleteable" />
+        <service id="PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener\SoftDeleteableListener" alias="php_alchemist.doctrine_behaviors.listener.softdeleteable" />
 
 
         <!-- DecisionService  -->
-        <service id="PHPAlchemist\DoctrineBehaviors\Contract\DecisionServiceInterface" alias="PHPAlchemist\DoctrineBehaviors\Service\DecisionService" public="true" />
-        <service id="php_alchemist.doctrine_behaviors.decision_service" class="PHPAlchemist\DoctrineBehaviors\Service\DecisionService" public="true" />
+        <service id="PHPAlchemist\Bundle\DoctrineBehaviors\Contract\DecisionServiceInterface" alias="PHPAlchemist\Bundle\DoctrineBehaviors\Service\DecisionService" public="true" />
+        <service id="php_alchemist.doctrine_behaviors.decision_service" class="PHPAlchemist\Bundle\DoctrineBehaviors\Service\DecisionService" public="true" />
 
-        <service id="PHPAlchemist\DoctrineBehaviors\Service\DecisionService" alias="php_alchemist.doctrine_behaviors.decision_service" public="true" />
-        <service id="php_alchemist.doctrine_behaviors.decision_service" class="PHPAlchemist\DoctrineBehaviors\Service\DecisionService" public="true" />
+        <service id="PHPAlchemist\Bundle\DoctrineBehaviors\Service\DecisionService" alias="php_alchemist.doctrine_behaviors.decision_service" public="true" />
+        <service id="php_alchemist.doctrine_behaviors.decision_service" class="PHPAlchemist\Bundle\DoctrineBehaviors\Service\DecisionService" public="true" />
 
     </services>
 </container>
