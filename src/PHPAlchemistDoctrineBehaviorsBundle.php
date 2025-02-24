@@ -21,7 +21,7 @@ class PHPAlchemistDoctrineBehaviorsBundle extends AbstractBundle
 
         /** @var ServiceConfigurator $definition */
         $definition = $container->services()->get('php_alchemist.doctrine_behaviors.decision_service');
-        if (null !== $config['decision_service']) {
+        if (null !== $config['decision_service'] && '' !== $config['decision_service']) {
             $definition->class($config['decision_service']);
             $definition->autowire(true);
             $definition->alias(DecisionServiceInterface::class, 'php_alchemist.doctrine_behaviors.decision_service');
