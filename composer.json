@@ -20,5 +20,13 @@
   },
   "require-dev": {
     "psalm/phar": "^6.3"
+  },
+  "extra": {
+    "symfony": {
+      "endpoint": [
+        "https://api.github.com/repos/PHP-Alchemist/symfony-recipes/contents/index.json",
+        "flex://defaults"
+      ]
+    }
   }
 }
