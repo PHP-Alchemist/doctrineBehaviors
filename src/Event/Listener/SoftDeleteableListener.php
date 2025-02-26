@@ -1,13 +1,13 @@
 <?php
 
-namespace PHPAlchemist\Bundle\DoctrineBehaviors\Event\Listener;
+namespace PHPAlchemist\Doctrine\BehaviorsBundle\Event\Listener;
 
 use Doctrine\Bundle\DoctrineBundle\Attribute\AsDoctrineListener;
 use Doctrine\ORM\Event\OnFlushEventArgs;
 use Doctrine\ORM\Events;
-use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\LiableInterface;
-use PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts\SoftDeleteableInterface;
-use PHPAlchemist\Bundle\DoctrineBehaviors\Utility\DoctrineExtensionUtility;
+use PHPAlchemist\Doctrine\BehaviorsBundle\Entity\Contracts\LiableInterface;
+use PHPAlchemist\Doctrine\BehaviorsBundle\Entity\Contracts\SoftDeleteableInterface;
+use PHPAlchemist\Doctrine\BehaviorsBundle\Utility\DoctrineExtensionUtility;
 
 #[AsDoctrineListener(event: Events::onFlush, priority: '500', connection: 'default')]
 final class SoftDeleteableListener extends DoctrineBehaviorsListener

@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\Bundle\DoctrineBehaviors\Contract;
+namespace PHPAlchemist\Doctrine\BehaviorsBundle\Contract;
 
 interface DecisionServiceInterface
 {

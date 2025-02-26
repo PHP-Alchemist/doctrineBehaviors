@@ -1,6 +1,7 @@
 <?php
 
-namespace PHPAlchemist\Bundle\DoctrineBehaviors\Trait;
+namespace PHPAlchemist\Doctrine\BehaviorsBundle\Trait;
+// PHPAlchemist\Doctrine\BehaviorsBundle\
 
 use Doctrine\ORM\Mapping as ORM;
 

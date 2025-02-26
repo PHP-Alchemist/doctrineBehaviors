@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts;
+namespace PHPAlchemist\Doctrine\BehaviorsBundle\Entity\Contracts;
 
 interface SoftDeleteableInterface
 {

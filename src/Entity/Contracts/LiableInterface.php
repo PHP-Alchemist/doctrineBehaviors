@@ -1,6 +1,6 @@
 <?php
 
-namespace PHPAlchemist\Bundle\DoctrineBehaviors\Entity\Contracts;
+namespace PHPAlchemist\Doctrine\BehaviorsBundle\Entity\Contracts;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 

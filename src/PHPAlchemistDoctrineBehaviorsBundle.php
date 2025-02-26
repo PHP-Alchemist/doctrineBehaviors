@@ -1,8 +1,8 @@
 <?php
 
-namespace PHPAlchemist\Bundle\DoctrineBehaviors;
+namespace PHPAlchemist\Doctrine\BehaviorsBundle;
 
-use PHPAlchemist\Bundle\DoctrineBehaviors\Contract\DecisionServiceInterface;
+use PHPAlchemist\Doctrine\BehaviorsBundle\Contract\DecisionServiceInterface;
 use Symfony\Component\Config\Definition\Configurator\DefinitionConfigurator;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
