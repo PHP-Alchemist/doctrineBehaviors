@@ -26,6 +26,7 @@ return static function (ContainerConfigurator $container): void {
 
     // Liable
     $services->set('php_alchemist.doctrine_behaviors.listener.liable', LiableEventListener::class)
+        ->autoconfigure()
         ->arg('$security', service(Security::class))
         ->call('setDecisionService', [service('php_alchemist.doctrine_behaviors.decision_service')]);
 
@@ -33,6 +34,7 @@ return static function (ContainerConfigurator $container): void {
 
     // Timestampable
     $services->set('php_alchemist.doctrine_behaviors.listener.timestampable', TimestampableEventListener::class)
+        ->autoconfigure()
         ->arg('$security', service(Security::class))
         ->call('setDecisionService', [service('php_alchemist.doctrine_behaviors.decision_service')]);
 
@@ -40,6 +42,7 @@ return static function (ContainerConfigurator $container): void {
 
     // SoftDeleteable
     $services->set('php_alchemist.doctrine_behaviors.listener.softdeletable', SoftDeleteableListener::class)
+        ->autoconfigure()
         ->arg('$security', service(Security::class))
         ->call('setDecisionService', [service('php_alchemist.doctrine_behaviors.decision_service')]);
 
