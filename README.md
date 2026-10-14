@@ -91,3 +91,15 @@ without writing any class. If you supply your own `decision_service`, that class
 owns the decision completely and is not handed the `behaviors` map — but
 anything switched off under `behaviors` is already gone from the container, so
 your class is never asked about it.
+
+## Timestampable
+
+Entities implementing `TimeStampableInterface` get both timestamps managed for
+them:
+
+- **On insert**, `createdAt` is set to the current time if it is empty, and
+  `updatedAt` is set to the same instant (as a separate `DateTime` instance) if
+  it is empty. A freshly inserted row therefore matches "updated since" queries.
+- **On update**, `updatedAt` is set to the current time.
+
+Values you set yourself before the insert are left alone.

@@ -29,14 +29,26 @@ final class TimestampableEventListener extends DoctrineBehaviorsListener
         }
 
         if (null === $entity->getCreatedAt()) {
-            $newUpdatedByValue = new \DateTime();
-            $entity->setCreatedAt($newUpdatedByValue);
+            $newCreatedAtValue = new \DateTime();
+            $entity->setCreatedAt($newCreatedAtValue);
 
             $unitOfWork->propertyChanged(
                 $entity,
                 TimeStampableInterface::CREATED_AT,
                 null,
-                $newUpdatedByValue
+                $newCreatedAtValue
+            );
+        }
+
+        if (null === $entity->getUpdatedAt()) {
+            $newUpdatedAtValue = clone $entity->getCreatedAt();
+            $entity->setUpdatedAt($newUpdatedAtValue);
+
+            $unitOfWork->propertyChanged(
+                $entity,
+                TimeStampableInterface::UPDATED_AT,
+                null,
+                $newUpdatedAtValue
             );
         }
     }
