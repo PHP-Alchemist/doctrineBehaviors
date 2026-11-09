@@ -19,7 +19,7 @@
     "php": "~8.4"
   },
   "require-dev": {
-    "psalm/phar": "^6.3"
+    "psalm/phar": "^7.0"
   },
   "extra": {
     "symfony": {
